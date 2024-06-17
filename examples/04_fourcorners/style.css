@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  height: 500px;
+  width: 500px;
+  background-color: #eee;
+}
+aside {
+  height: 50px;
+  width: 50px;
+  animation: mover 4s linear infinite, colorChange 4s steps(1, end) infinite;
+}
+
+@keyframes mover {
+  25% {
+    transform: translateX(450px);
+  }
+  50% {
+    transform: translateY(450px) translateX(450px);
+  }
+  75% {
+    transform: translateY(450px) translateX(0px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: lightseagreen;
+  }
+  25% {
+    background-color: lightcoral;
+  }
+  50% {
+    background-color: lightblue;
+  }
+  75% {
+    background-color: lightgoldenrodyellow;
+  }
+  100% {
+    background-color: lightseagreen;
+  }
+}
